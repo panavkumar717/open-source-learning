@@ -39,4 +39,17 @@ function deleteTask(id) {
   return tasks.splice(index, 1)[0];
 }
 
+// Complete Task
+function completeTask(id) {
+  const task = tasks.find((task) => task.id === id);
+
+  if (!task) {
+    throw new Error("Task not found");
+  }
+
+  task.completed = true;
+  return task;
+}
+
+
 module.exports = { getTasks, addTask, filterTasks, deleteTask };
