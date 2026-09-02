@@ -10,6 +10,10 @@ function getTasks() {
 }
 
 function filterTasks(completed) {
+  if (typeof completed !== "boolean") {
+    throw new Error("completed must be a boolean");
+  }
+
   return tasks.filter((task) => task.completed === completed);
 }
 
