@@ -9,6 +9,14 @@ function getTasks() {
   return tasks;
 }
 
+function filterTasks(completed) {
+  if (typeof completed !== "boolean") {
+    throw new Error("completed must be a boolean");
+  }
+
+  return tasks.filter((task) => task.completed === completed);
+}
+
 function addTask(title) {
   const task = {
     id: tasks.length + 1,
@@ -20,4 +28,4 @@ function addTask(title) {
   return task;
 }
 
-module.exports = { getTasks, addTask };
+module.exports = { getTasks, addTask , filterTasks };
