@@ -51,5 +51,22 @@ function completeTask(id) {
   return task;
 }
 
+// Update Task
+function updateTask(id, updatedData) {
+  const task = tasks.find((task) => task.id === id);
+  if (!task) {
+    throw new Error("Task not found");
+  }
+  if (updatedData.title !== undefined) {
+    task.title = updatedData.title;
+  }
+  if (updatedData.completed !== undefined) {
+    if (typeof updatedData.completed !== "boolean") {
+      throw new Error("completed must be a boolean");
+    }
+    task.completed = updatedData.completed;
+  }
+  return task;
+}
 
-module.exports = { getTasks, addTask, filterTasks, deleteTask ,completeTask};
+module.exports = { getTasks, addTask, filterTasks, deleteTask, completeTask, updateTask };
