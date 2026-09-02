@@ -52,4 +52,4 @@ function completeTask(id) {
 }
 
 
-module.exports = { getTasks, addTask, filterTasks, deleteTask };
+module.exports = { getTasks, addTask, filterTasks, deleteTask ,completeTask};
