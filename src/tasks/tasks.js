@@ -28,4 +28,15 @@ function addTask(title) {
   return task;
 }
 
-module.exports = { getTasks, addTask , filterTasks };
+// Delete Task
+function deleteTask(id) {
+  const index = tasks.findIndex((task) => task.id === id);
+
+  if (index === -1) {
+    throw new Error("Task not found");
+  }
+
+  return tasks.splice(index, 1)[0];
+}
+
+module.exports = { getTasks, addTask, filterTasks, deleteTask };
