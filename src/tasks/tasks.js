@@ -6,12 +6,14 @@ const tasks = [
     title: "Create GitHub repository",
     completed: true,
     category: "setup",
+    priority: "high",
   },
   {
     id: 2,
     title: "Create first feature branch",
     completed: false,
     category: "git",
+    priority: "medium",
   },
 ];
 
