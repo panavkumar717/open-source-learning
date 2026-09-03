@@ -5,12 +5,14 @@ const tasks = [
     id: 1,
     title: "Create GitHub repository",
     completed: true,
+    category: "setup",
     priority: "high",
   },
   {
     id: 2,
     title: "Create first feature branch",
     completed: false,
+    category: "git",
     priority: "medium",
   },
 ];
@@ -79,4 +81,4 @@ function updateTask(id, updatedData) {
   return task;
 }
 
-module.exports = { getTasks, addTask, filterTasks, deleteTask, completeTask, updateTask ,donetasks};
+module.exports = { getTasks, addTask, filterTasks, deleteTask, completeTask, updateTask };
