@@ -1,7 +1,7 @@
 // HackForge application entry point.
 
 const app = {
-  name: "HackForge",
+  name: "HackForge By Astro",
   version: "0.1.0",
 };
 
