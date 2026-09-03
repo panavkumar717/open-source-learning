@@ -1,8 +1,18 @@
 // Task module.
 
 const tasks = [
-  { id: 1, title: "Create GitHub repository", completed: true },
-  { id: 2, title: "Create first feature branch", completed: false },
+  {
+    id: 1,
+    title: "Create GitHub repository",
+    completed: true,
+    category: "setup",
+  },
+  {
+    id: 2,
+    title: "Create first feature branch",
+    completed: false,
+    category: "git",
+  },
 ];
 
 function getTasks() {
