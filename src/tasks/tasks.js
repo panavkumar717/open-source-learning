@@ -1,8 +1,18 @@
 // Task module.
 
 const tasks = [
-  { id: 1, title: "Create GitHub repository", completed: true },
-  { id: 2, title: "Create first feature branch", completed: false },
+  {
+    id: 1,
+    title: "Create GitHub repository",
+    completed: true,
+    priority: "high",
+  },
+  {
+    id: 2,
+    title: "Create first feature branch",
+    completed: false,
+    priority: "medium",
+  },
 ];
 
 function getTasks() {
@@ -69,4 +79,4 @@ function updateTask(id, updatedData) {
   return task;
 }
 
-module.exports = { getTasks, addTask, filterTasks, deleteTask, completeTask, updateTask };
+module.exports = { getTasks, addTask, filterTasks, deleteTask, completeTask, updateTask ,donetasks};
